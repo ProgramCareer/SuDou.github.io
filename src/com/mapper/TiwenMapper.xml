@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TiwenMapper">
+	<select id="findTiwenList" 
+		resultType="Tiwen">
+		select * from tiwen 
+	</select>
+	
+	<select id="query" parameterType="java.util.Map" resultType="Tiwen">
+		select * from tiwen  
+		<where>
+			<if test="id!=null and id!=0">
+			   and id= #{id}
+			</if>
+			<if test="tid!=null and tid!=0">
+			   and tid= #{tid}
+			</if>
+			<if test="uid!=null and uid!=0">
+			   and uid= #{uid}
+			</if>
+		</where>
+	</select>
+	
+	
+	<select id="queryTiwenById" parameterType="int" resultType="Tiwen">
+		select * from tiwen where id=${value}
+	</select>
+ 
+
+
+	<insert id="insertTiwen" useGeneratedKeys="true" keyProperty="id" parameterType="Tiwen">
+		insert into tiwen
+		(tid,tname,title,contents,twsj,replays,uid,uname)
+		values
+		(#{tid},#{tname},#{title},#{contents},#{twsj},#{replays},#{uid},#{uname});
+	</insert>
+ 
+	
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+	<update id="updateTiwen" parameterType="Tiwen" >
+		update tiwen set
+		tid=#{tid},tname=#{tname},title=#{title},contents=#{contents},twsj=#{twsj},replays=#{replays},uid=#{uid},uname=#{uname}
+		where
+		id=#{id}	
+	</update>
+	
+ 
+	
+	<delete id="deleteTiwen" parameterType="int">
+	    delete from  tiwen where id=${value}
+	</delete>
+
+</mapper>
+
+ 

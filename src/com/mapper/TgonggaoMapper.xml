@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TgonggaoMapper">
+	<select id="findTgonggaoList" 
+		resultType="Tgonggao">
+		select * from tgonggao 
+	</select>
+	
+	<select id="query" parameterType="java.util.Map" resultType="Tgonggao">
+		select * from tgonggao  
+		<where>
+			<if test="id!=null and id!=0">
+			   and id= #{id}
+			</if>
+		</where>
+	</select>
+	
+	
+	<select id="queryTgonggaoById" parameterType="int" resultType="Tgonggao">
+		select * from tgonggao where id=${value}
+	</select>
+ 
+
+
+	<insert id="insertTgonggao" useGeneratedKeys="true" keyProperty="id" parameterType="Tgonggao">
+		insert into tgonggao
+		(gonggaotitle,gonggaocontent,gonggaodata,gonggaofabuzhe,gonggaodel)
+		values
+		(#{gonggaotitle},#{gonggaocontent},#{gonggaodata},#{gonggaofabuzhe},#{gonggaodel});
+	</insert>
+ 
+	
+  
+ 
+ 
+ 
+ 
+ 
+
+
+
+	<update id="updateTgonggao" parameterType="Tgonggao" >
+		update tgonggao set
+		gonggaotitle=#{gonggaotitle},gonggaocontent=#{gonggaocontent},gonggaodata=#{gonggaodata},gonggaofabuzhe=#{gonggaofabuzhe},gonggaodel=#{gonggaodel}
+		where
+		id=#{id}	
+	</update>
+	
+ 
+	
+	<delete id="deleteTgonggao" parameterType="int">
+	    delete from  tgonggao where id=${value}
+	</delete>
+
+</mapper>
+
+ 
