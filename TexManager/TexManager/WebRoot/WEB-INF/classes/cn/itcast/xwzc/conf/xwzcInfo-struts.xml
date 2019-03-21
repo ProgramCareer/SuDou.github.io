@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="xwzc-action" namespace="/xwzc" extends="base-default">
+		<action name="xwzcinfo_*" class="cn.itcast.xwzc.action.NewsPolicyAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/home/{1}.jsp</result>
+			<result name="newsUI">/WEB-INF/jsp/xwzc/news.jsp</result>
+			
+		</action>
+	</package>
+
+</struts>

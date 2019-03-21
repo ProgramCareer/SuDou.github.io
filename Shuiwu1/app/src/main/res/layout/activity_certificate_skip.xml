@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="certificate.CertificateSkip">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="1920px"
+        android:layout_height="160px"
+        android:layout_marginStart="0px"
+        android:layout_marginTop="0px"
+        android:background="#07426a"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="62px"
+            android:layout_height="53px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="81px"
+            android:background="#07426a"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_fanhui" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="SourceHanSansCN-Medium"
+            android:gravity="center"
+            android:text="税收证明"
+            android:textColor="#ffffff"
+            android:textSize="60px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_height="112px"
+        android:layout_marginTop="0px"
+        android:background="#ececec"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_marginStart="87px"
+            android:layout_marginTop="62px"
+            android:background="#da70d6"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_zhengming01" />
+
+        <TextView
+            android:layout_width="250px"
+            android:layout_height="50px"
+            android:layout_marginStart="23px"
+            android:layout_marginTop="62px"
+            android:fontFamily="SourceHanSansCN-Medium"
+            android:includeFontPadding="false"
+            android:text="税收证明"
+            android:textColor="#444444"
+            android:textSize="50px"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="928px"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_marginStart="0px"
+        android:layout_marginTop="0px"
+        android:background="#ececec"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="280px"
+            android:layout_height="120px"
+            android:layout_marginStart="91px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/buttonselector"
+            android:fontFamily="SourceHanSansCN-Medium"
+            android:text="证明开具"
+            android:textColor="@drawable/buttontextselector"
+            android:textSize="48px" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="224px"
+            android:layout_height="224px"
+            android:layout_marginStart="1000px"
+            android:layout_marginTop="350px"
+            android:background="#ececec"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_quhao" />
+    </LinearLayout>
+</RelativeLayout>

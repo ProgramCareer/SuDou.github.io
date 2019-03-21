@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pc.shuiwu1">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="certificate.CertificateSkip" />
+        <activity android:name="certificate.Certificate" />
+        <activity android:name="check.Ckeck" />
+        <activity android:name="check.CkeckSkip" />
+        <activity android:name="declaration.Declaration" />
+        <activity android:name="declaration.Declaration1" />
+        <activity android:name="declaration.Declaration2" />
+        <activity android:name="declaration.Declaration3" />
+        <activity android:name="declaration.DeclarationSkip" />
+        <activity android:name="hotQuestion.HotQuestionSkip" />
+        <activity android:name="hotQuestion.HotSuccess" />
+        <activity android:name="report.ReportSkip" />
+        <activity android:name="report.ReportSuccess" />
+        <activity android:name="invoice.Invoice" />
+        <activity android:name="invoice.Invoice1" />
+        <activity android:name="invoice.Invoice2" />
+        <activity android:name="invoice.Invoice3" />
+        <activity android:name="invoice.InvoiceSkip" />
+        <activity android:name="perferential.Preferential" />
+        <activity android:name="perferential.Preferential2" />
+        <activity android:name="perferential.Preferential3" />
+        <activity android:name="perferential.PreferentialSkip" />
+        <activity android:name="quhao.Quhao" />
+        <activity android:name="quhao.Success"></activity>
+    </application>
+
+</manifest>
